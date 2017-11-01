@@ -1,0 +1,39 @@
+# ======== GLOBAL ========
+.*
+!.gitignore
+*~
+.DS_Store
+._*
+/*.sublime-project
+*.sublime-workspace
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Itellij files
+*.iml
+.idea/*
+npm-debug.log
+*/.settings/*
+# ======== CLIENT ========
+marcel-lavrigne-client/src/build/*
+marcel-lavrigne-client/src/bin/*
+marcel-lavrigne-client/src/test-coverage/*
+marcel-lavrigne-client/src/node_modules/*
+marcel-lavrigne-client/src/node
+marcel-lavrigne-client/src/app/vendor/*
+marcel-lavrigne-client/target/*
+marcel-lavrigne-client/target-grunt/*
+!marcel-lavrigne-client/src/.bowerrc
+!marcel-lavrigne-client/src/.jshintrc
+!marcel-lavrigne-client/src/.npmrc
+node_modules
+
+
+# ======== SERVER ========
+*/.project
+*/.classpath
+*/target/*
+*/bin/*
+marcel-lavrigne-web/src/main/webapp/*

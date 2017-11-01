@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.marcel.lavrigne</groupId>
+        <artifactId>MarcelLavrigne</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>marcel-lavrigne-web</artifactId>
+    <packaging>war</packaging>
+    <name>Marcel Lavrigne - Web services</name>
+
+    <properties>
+        <swagger.version>1.0.2</swagger.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.marcel.lavrigne</groupId>
+            <artifactId>marcel-lavrigne-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.marcel.lavrigne</groupId>
+            <artifactId>marcel-lavrigne-validator</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.marcel.lavrigne</groupId>
+            <artifactId>marcel-lavrigne-doc</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mangofactory</groupId>
+            <artifactId>swagger-springmvc</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+    </dependencies>
+
+  
+</project>
