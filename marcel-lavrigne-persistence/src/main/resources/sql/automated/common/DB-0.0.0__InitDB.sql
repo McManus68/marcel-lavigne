@@ -13,6 +13,6 @@ CREATE TABLE `user` (
   `lastName` varchar(30) DEFAULT NULL,
   `mail` varchar(50) DEFAULT NULL,
   `city` varchar(30) DEFAULT NULL,
-  `role` varchar(20) DEFAULT NULL
+  `role` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

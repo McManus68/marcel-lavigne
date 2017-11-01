@@ -1,7 +1,6 @@
 package com.marcel.lavrigne.services.impl;
 
 import com.marcel.lavrigne.model.MarcelLavrigneEntity;
-import com.marcel.lavrigne.security.services.AuthenticationService;
 import com.marcel.lavrigne.services.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,9 +13,6 @@ public abstract class EntityServiceImpl<T extends MarcelLavrigneEntity> implemen
 
     @Autowired
     JpaRepository<T, Long> repo;
-
-    @Autowired
-    AuthenticationService authSrv;
 
     @Override
     public List<T> getAll() {

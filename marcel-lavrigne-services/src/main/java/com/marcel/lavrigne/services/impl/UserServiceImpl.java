@@ -8,10 +8,6 @@ import com.marcel.lavrigne.services.UserService;
 
 @Service
 public class UserServiceImpl extends EntityServiceImpl<User> implements UserService {
-   
-    public User getLoggedUser() {
-        return ((UserRepository) repo).findById(authSrv.getLoggedUser().getId()).get();
-    }
 
     @Override
     public User changePassword(Long userId, String oldPassword, String newPassword) {

@@ -24,11 +24,11 @@
 
     <dependencies>
 
-        <dependency>
+        <!--dependency>
             <groupId>com.marcel.lavrigne</groupId>
             <artifactId>marcel-lavrigne-security</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
             <groupId>com.marcel.lavrigne</groupId>

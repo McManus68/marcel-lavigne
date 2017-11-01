@@ -19,7 +19,7 @@
         <module>marcel-lavrigne-model</module>
         <module>marcel-lavrigne-persistence</module>
         <module>marcel-lavrigne-validator</module>
-        <module>marcel-lavrigne-security</module>
+        <!--module>marcel-lavrigne-security</module-->
         <module>marcel-lavrigne-services</module>
         <!--module>marcel-lavrigne-client</module-->
         <module>marcel-lavrigne-web</module>
@@ -30,7 +30,6 @@
         <java.version>1.8</java.version>
         <spring.version>5.0.1.RELEASE</spring.version>
         <spring.security.version>5.0.0.M5</spring.security.version>
-        <spring.boot.version>2.0.0.M5</spring.boot.version>
         <spring.data.version>2.0.0.RELEASE</spring.data.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -40,30 +39,6 @@
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -76,6 +51,7 @@
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -101,17 +77,37 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>marcelLavrigne</warName>
+                    <packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.7.v20170914</version>
+                <configuration>
+                    <webApp>
+                        <jettyEnvXml>marcel-lavrigne-web/target/classes/jetty-env.xml</jettyEnvXml>
+                    </webApp>
+                    <!--webAppSourceDirectory>src/${client.folder}</webAppSourceDirectory-->
                 </configuration>
             </plugin>
         </plugins>
