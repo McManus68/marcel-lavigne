@@ -1,20 +1,13 @@
 package com.marcel.lavrigne.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import com.marcel.lavrigne.model.enumeration.RoleName;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.marcel.lavrigne.model.enumeration.RoleName;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -41,14 +34,8 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 	@Column(name = "mail")
 	private String mail;
 
-	@Column(name = "phone")
-	private String phone;
-
 	@Column(name = "city")
 	private String city;
-
-	@Column(name = "country")
-	private String country;
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "role")
@@ -121,28 +108,12 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 		this.mail = mail;
 	}
 
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
 	public String getCity() {
 		return city;
 	}
 
 	public void setCity(String city) {
 		this.city = city;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
 	}
 
 	public RoleName getRole() {
