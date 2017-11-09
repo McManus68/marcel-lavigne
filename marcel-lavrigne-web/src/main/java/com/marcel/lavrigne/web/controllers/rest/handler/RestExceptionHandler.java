@@ -27,4 +27,13 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         LOGGER.debug("RestExceptionHandler ", e);
         return "error";
     }
+
+
+    @ExceptionHandler(Exception.class)
+    @ResponseBody
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    public String handleError(Exception e) {
+        LOGGER.debug("RestExceptionHandler ", e);
+        return "error";
+    }
 }

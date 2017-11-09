@@ -15,30 +15,22 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name = "id", unique = true, nullable = false)
+	@Id	@GeneratedValue
 	private Long id;
 
-	@Column(name = "login")
 	private String login;
 
-	@Column(name = "password")
 	private String password;
 
-	@Column(name = "firstname")
-	private String firstName;
+	private String firstname;
 
-	@Column(name = "lastname")
-	private String lastName;
+	private String lastname;
 
-	@Column(name = "mail")
 	private String mail;
 
-	@Column(name = "city")
 	private String city;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "role")
 	private RoleName role;
 
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -84,20 +76,20 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 		this.login = login;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstName) {
+		this.firstname = firstName;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastName) {
+		this.lastname = lastName;
 	}
 
 	public String getMail() {

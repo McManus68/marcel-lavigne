@@ -1,7 +1,7 @@
 package com.marcel.lavrigne.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,8 +9,7 @@ import javax.persistence.Table;
 @Table(name = "event")
 public class Event extends MarcelLavrigneEntity {
 
-	@Id
-	@Column(name = "id", unique = true, nullable = false)
+	@Id	@GeneratedValue
 	private Long id;
 
 	private String name;
