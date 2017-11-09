@@ -11,6 +11,7 @@
     <description>Model layer</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <validation-api.version>1.1.0.Final</validation-api.version>
     </properties>
 

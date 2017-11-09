@@ -1,20 +1,17 @@
-PostgreSQL:
-  restart: always
-  image: sameersbn/postgresql:10
-  ports:
-    - "5432:5432"
-  environment:
-    - DEBUG=false
-    - DB_USER=
-    - DB_PASS=
-    - DB_NAME=
-    - DB_TEMPLATE=
-
-    - DB_EXTENSION=
-
-    - REPLICATION_MODE=
-    - REPLICATION_USER=
-    - REPLICATION_PASS=
-    - REPLICATION_SSLMODE=
-  volumes:
-- /srv/docker/postgresql:/var/lib/postgresql
+version: '2'
+services:
+  mysql:
+    container_name: ml-db
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: 'marcellavrigne'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_USER: 'root'
+      MYSQL_PASS: 'root'
+    ports:
+      - "3306:3306"
+    volumes:
+      - my-datavolume:/var/lib/marcellavrigne
+volumes:
+  my-datavolume:

@@ -9,6 +9,7 @@
     <name>Marcel Lavrigne - Data Persistence</name>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <postgresql.version>42.1.4</postgresql.version>
         <flyway.version>2.3.1</flyway.version>
         <mysql.version>6.0.6</mysql.version>

@@ -8,6 +8,11 @@
 
     <artifactId>marcel-lavrigne-doc</artifactId>
     <name>Marcel Lavrigne - Web services documentation</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <build>
         <plugins>

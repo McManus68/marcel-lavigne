@@ -72,6 +72,17 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
 
     </dependencies>
 
@@ -105,7 +116,7 @@
                 <version>9.4.7.v20170914</version>
                 <configuration>
                     <webApp>
-                        <jettyEnvXml>marcel-lavrigne-web/target/classes/jetty-env.xml</jettyEnvXml>
+                        <jettyEnvXml>target/classes/jetty-env.xml</jettyEnvXml>
                     </webApp>
                     <!--webAppSourceDirectory>src/${client.folder}</webAppSourceDirectory-->
                 </configuration>
