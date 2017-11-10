@@ -1,19 +1,12 @@
 package com.marcel.lavrigne.model;
 
 import com.marcel.lavrigne.model.enumeration.RoleName;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 @Entity
 @Table(name = "user")
-public class User extends MarcelLavrigneEntity implements UserDetails {
-
-	private static final long serialVersionUID = 1L;
+public class User extends MarcelLavrigneEntity  {
 
 	@Id	@GeneratedValue
 	private Long id;
@@ -33,39 +26,13 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 	@Enumerated(EnumType.STRING)
 	private RoleName role;
 
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		List<RoleName> roles = new ArrayList<>();
-		roles.add(role);
-		return roles;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public String getUsername() {
-		return login;
-	}
-
-	public boolean isAccountNonExpired() {
-		return true;
-	}
-
-	public boolean isAccountNonLocked() {
-		return true;
-	}
-
-	public boolean isCredentialsNonExpired() {
-		return false;
-	}
-
-	public boolean isEnabled() {
-		return true;
-	}
-
 	@Override
 	public Long getId() {
 		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getLogin() {
@@ -76,20 +43,28 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 		this.login = login;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public String getFirstname() {
 		return firstname;
 	}
 
-	public void setFirstname(String firstName) {
-		this.firstname = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	public String getLastname() {
 		return lastname;
 	}
 
-	public void setLastname(String lastName) {
-		this.lastname = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getMail() {
@@ -115,13 +90,4 @@ public class User extends MarcelLavrigneEntity implements UserDetails {
 	public void setRole(RoleName role) {
 		this.role = role;
 	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 }

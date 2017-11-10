@@ -19,7 +19,7 @@
         <module>marcel-lavrigne-model</module>
         <module>marcel-lavrigne-persistence</module>
         <module>marcel-lavrigne-validator</module>
-        <!--module>marcel-lavrigne-security</module-->
+        <module>marcel-lavrigne-security</module>
         <module>marcel-lavrigne-services</module>
         <!--module>marcel-lavrigne-client</module-->
         <module>marcel-lavrigne-web</module>
@@ -29,7 +29,6 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.version>5.0.1.RELEASE</spring.version>
-        <spring.security.version>5.0.0.M5</spring.security.version>
         <spring.boot.version>2.0.0.M6</spring.boot.version>
         <spring.data.version>2.0.0.RELEASE</spring.data.version>
         <hibernate.version>5.2.12.Final</hibernate.version>

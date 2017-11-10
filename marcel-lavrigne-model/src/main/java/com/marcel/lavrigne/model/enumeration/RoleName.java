@@ -1,14 +1,6 @@
 package com.marcel.lavrigne.model.enumeration;
 
-import org.springframework.security.core.GrantedAuthority;
-
-public enum RoleName implements GrantedAuthority {
+public enum RoleName {
 
 	USER, ADMIN, SUPER_ADMIN;
-
-	@Override
-	public String getAuthority() {
-		return name();
-	}
-
 }
