@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest/events")
+@RequestMapping("rest/events")
 public class EventController extends EntityController<Event> {
 
     @Override

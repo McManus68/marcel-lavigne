@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/rest/enum")
+@RequestMapping("rest/enum")
 public class EnumController {
 
     @Autowired

@@ -27,13 +27,9 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring.version>5.0.1.RELEASE</spring.version>
         <spring.boot.version>2.0.0.M6</spring.boot.version>
         <spring.data.version>2.0.0.RELEASE</spring.data.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
-        <slf4j.version>1.7.25</slf4j.version>
-        <commons.lang.version>3.6</commons.lang.version>
-        <commons-io.version>2.6</commons-io.version>
         <jackson.version>2.9.2</jackson.version>
     </properties>
 
@@ -56,18 +52,6 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.0</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
         </dependency>
 
     </dependencies>
