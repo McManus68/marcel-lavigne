@@ -30,10 +30,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers(HttpMethod.POST, "/login").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers(HttpMethod.POST, "/rest/login").permitAll()
+                .antMatchers(HttpMethod.GET, "**").permitAll()
+
                 .and()
-                .addFilterBefore(new JwtLoginFilter("/login", authenticationManager()),
+                .addFilterBefore(new JwtLoginFilter("/rest/login", authenticationManager()),
                         UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(new JwtAuthenticationFilter(),
                         UsernamePasswordAuthenticationFilter.class)
@@ -44,9 +45,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
-
-        /*auth.inMemoryAuthentication().withUser(
-                User.withDefaultPasswordEncoder().username("admin").password("password").roles("USER").build());*/
     }
 
     @Bean
