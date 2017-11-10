@@ -1,13 +1,17 @@
 package com.marcel.lavrigne.services.impl;
 
-import org.springframework.stereotype.Service;
-
 import com.marcel.lavrigne.model.User;
 import com.marcel.lavrigne.persistence.UserRepository;
 import com.marcel.lavrigne.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl extends EntityServiceImpl<User> implements UserService {
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     @Override
     public User changePassword(Long userId, String oldPassword, String newPassword) {
@@ -23,5 +27,10 @@ public class UserServiceImpl extends EntityServiceImpl<User> implements UserServ
     public User getByMail(String mail) {
         return ((UserRepository) repo).findByMail(mail);
     }
-    
+
+    @Override
+    public Long add(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return super.add(user);
+    }
 }
