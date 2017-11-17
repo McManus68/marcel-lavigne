@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.marcel.lavrigne</groupId>
+        <artifactId>MarcelLavrigne</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>marcel-lavrigne-client</artifactId>
+    <name>Marcel Lavrigne - Client</name>
+
+    <modules>
+        <!--module>marcel-lavrigne-android</modul-->
+        <!--module>marcel-lavrigne-webapp</module-->       
+    </modules>
+
+</project>
