@@ -37,3 +37,4 @@ node_modules
 */target/*
 */bin/*
 marcel-lavrigne-web/src/main/webapp/*
+marcel-lavrigne-web/src/main/resources/static/*

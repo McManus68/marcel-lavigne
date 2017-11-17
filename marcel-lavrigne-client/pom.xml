@@ -7,10 +7,10 @@
     </parent>
     <artifactId>marcel-lavrigne-client</artifactId>
     <name>Marcel Lavrigne - Client</name>
+    <packaging>pom</packaging>
 
     <modules>
-        <!--module>marcel-lavrigne-android</modul-->
-        <!--module>marcel-lavrigne-webapp</module-->       
+        <module>marcel-lavrigne-webapp</module>       
     </modules>
 
 </project>

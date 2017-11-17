@@ -21,7 +21,7 @@
         <module>marcel-lavrigne-validator</module>
         <module>marcel-lavrigne-security</module>
         <module>marcel-lavrigne-services</module>
-        <!--module>marcel-lavrigne-client</module-->
+        <module>marcel-lavrigne-client</module>
         <module>marcel-lavrigne-web</module>     
     </modules>
 
