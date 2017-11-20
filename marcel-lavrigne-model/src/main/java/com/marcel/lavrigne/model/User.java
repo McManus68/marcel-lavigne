@@ -26,6 +26,10 @@ public class User extends MarcelLavrigneEntity  {
 	@Enumerated(EnumType.STRING)
 	private RoleName role;
 
+	@OneToOne
+	@JoinColumn(name = "user_id")
+	private UserSettings settings;
+
 	@Override
 	public Long getId() {
 		return id;

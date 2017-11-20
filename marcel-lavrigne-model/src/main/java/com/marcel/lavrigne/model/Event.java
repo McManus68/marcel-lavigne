@@ -1,43 +1,157 @@
 package com.marcel.lavrigne.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.awt.Point;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "event")
 public class Event extends MarcelLavrigneEntity {
 
-	@Id	@GeneratedValue
+	@Id	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String name;
 
-	private String description;
+	private String content;
 
-	@Override
-	public Long getId() {
-		return id;
-	}
+	private String type;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id", referencedColumnName = "id")
+	private User owner;
 
-	public String getName() {
-		return name;
-	}
+	private String address;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	private String city;
 
-	public String getDescription() {
-		return description;
-	}
+	private String country;
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	private Integer capacity;
+
+	private Point location;
+
+	private String phone;
+
+    @OneToMany(mappedBy = "event")
+	private List<Comment> comments;
+
+	@Column(name = "auto_accept_subscription")
+	private boolean autoAcceptSubscsription;
+
+	private LocalDateTime date;
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Integer getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
+    }
+
+    public Point getLocation() {
+        return location;
+    }
+
+    public void setLocation(Point location) {
+        this.location = location;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public boolean isAutoAcceptSubscsription() {
+        return autoAcceptSubscsription;
+    }
+
+    public void setAutoAcceptSubscsription(boolean autoAcceptSubscsription) {
+        this.autoAcceptSubscsription = autoAcceptSubscsription;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
+    }
 }

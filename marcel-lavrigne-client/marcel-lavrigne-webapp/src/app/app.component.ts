@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'marcel-lavrigne',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'appdd';
+  title = 'Marcel Lavrigne - La rencontre par le vin';
 }

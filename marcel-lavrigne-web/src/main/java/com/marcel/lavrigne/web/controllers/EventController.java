@@ -17,7 +17,7 @@ public class EventController extends EntityController<Event> {
     public List<Event> getAll() {
         List<Event> events = new ArrayList<>();
         Event e = new Event();
-        e.setDescription("coud sus");
+        e.setContent("coud sus");
         e.setId(2l);
         e.setName("pwet");
         events.add(e);
