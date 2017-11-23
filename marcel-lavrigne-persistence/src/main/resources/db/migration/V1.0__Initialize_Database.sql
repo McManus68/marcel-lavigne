@@ -1,3 +1,4 @@
+
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(40) NOT NULL,
@@ -37,6 +38,7 @@ CREATE TABLE `event` (
   `capacity` int(4) DEFAULT NULL,
   `location` point DEFAULT NULL,
   `phone` varchar(15) DEFAULT NULL,
+  `price` double DEFAULT NULL,
   `auto_accept_subscription` tinyint(1) DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -75,6 +77,7 @@ CREATE TABLE `message` (
   `from_id` int(11) DEFAULT NULL,
   `to_id` int(11) DEFAULT NULL,
   `event_id` int(11) DEFAULT NULL,
+  `content` TEXT(400) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `FK_Message_From_idx` (`from_id`),
@@ -88,6 +91,7 @@ CREATE TABLE `message` (
 
 CREATE TABLE `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(120) NOT NULL,
   `owner_id` int(11) NOT NULL,
   `content` text NOT NULL,
   `publication_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -100,6 +104,7 @@ CREATE TABLE `news` (
 
 CREATE TABLE `notification` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(20) NOT NULL,
   `event_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,

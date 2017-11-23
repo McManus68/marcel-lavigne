@@ -1,5 +1,7 @@
 package com.marcel.lavrigne.model;
 
+import com.marcel.lavrigne.model.enumeration.NotificationType;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -10,6 +12,8 @@ public class Notification extends MarcelLavrigneEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private NotificationType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "event_id", referencedColumnName = "id")
@@ -30,6 +34,14 @@ public class Notification extends MarcelLavrigneEntity {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public NotificationType getType() {
+        return type;
+    }
+
+    public void setType(NotificationType type) {
+        this.type = type;
     }
 
     public Event getEvent() {

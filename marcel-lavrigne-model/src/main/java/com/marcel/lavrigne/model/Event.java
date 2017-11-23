@@ -1,7 +1,9 @@
 package com.marcel.lavrigne.model;
 
+import com.marcel.lavrigne.model.enumeration.EventType;
+
 import javax.persistence.*;
-import java.awt.Point;
+import java.awt.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -16,7 +18,7 @@ public class Event extends MarcelLavrigneEntity {
 
 	private String content;
 
-	private String type;
+	private EventType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id", referencedColumnName = "id")
@@ -33,6 +35,8 @@ public class Event extends MarcelLavrigneEntity {
 	private Point location;
 
 	private String phone;
+
+	private Double price;
 
     @OneToMany(mappedBy = "event")
 	private List<Comment> comments;
@@ -67,11 +71,11 @@ public class Event extends MarcelLavrigneEntity {
         this.content = content;
     }
 
-    public String getType() {
+    public EventType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(EventType type) {
         this.type = type;
     }
 
@@ -153,5 +157,13 @@ public class Event extends MarcelLavrigneEntity {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }

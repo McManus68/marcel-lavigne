@@ -23,6 +23,8 @@ public class Message extends MarcelLavrigneEntity {
     @JoinColumn(name = "event_id", referencedColumnName = "id")
     private Event event;
 
+    private String content;
+
     private LocalDateTime date;
 
     @Override
@@ -56,6 +58,14 @@ public class Message extends MarcelLavrigneEntity {
 
     public void setEvent(Event event) {
         this.event = event;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public LocalDateTime getDate() {
