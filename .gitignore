@@ -17,17 +17,17 @@ $RECYCLE.BIN/
 npm-debug.log
 */.settings/*
 # ======== CLIENT ========
-marcel-lavrigne-client/src/build/*
-marcel-lavrigne-client/src/bin/*
-marcel-lavrigne-client/src/test-coverage/*
-marcel-lavrigne-client/src/node_modules/*
-marcel-lavrigne-client/src/node
-marcel-lavrigne-client/src/app/vendor/*
-marcel-lavrigne-client/target/*
-marcel-lavrigne-client/target-grunt/*
-!marcel-lavrigne-client/src/.bowerrc
-!marcel-lavrigne-client/src/.jshintrc
-!marcel-lavrigne-client/src/.npmrc
+marcel-lavigne-client/src/build/*
+marcel-lavigne-client/src/bin/*
+marcel-lavigne-client/src/test-coverage/*
+marcel-lavigne-client/src/node_modules/*
+marcel-lavigne-client/src/node
+marcel-lavigne-client/src/app/vendor/*
+marcel-lavigne-client/target/*
+marcel-lavigne-client/target-grunt/*
+!marcel-lavigne-client/src/.bowerrc
+!marcel-lavigne-client/src/.jshintrc
+!marcel-lavigne-client/src/.npmrc
 node_modules
 
 
@@ -36,5 +36,5 @@ node_modules
 */.classpath
 */target/*
 */bin/*
-marcel-lavrigne-web/src/main/webapp/*
-marcel-lavrigne-web/src/main/resources/static/*
+marcel-lavigne-web/src/main/webapp/*
+marcel-lavigne-web/src/main/resources/static/*

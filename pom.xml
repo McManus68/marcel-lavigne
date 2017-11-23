@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.marcel.lavrigne</groupId>
-    <artifactId>MarcelLavrigne</artifactId>
+    <groupId>com.marcel.lavigne</groupId>
+    <artifactId>MarcelLavigne</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>marcel-lavrigne</name>
+    <name>marcel-lavigne</name>
 
     <repositories>
         <repository>
@@ -16,13 +16,13 @@
     </repositories>
 
     <modules>
-        <module>marcel-lavrigne-model</module>
-        <module>marcel-lavrigne-persistence</module>
-        <module>marcel-lavrigne-validator</module>
-        <module>marcel-lavrigne-security</module>
-        <module>marcel-lavrigne-services</module>
-        <module>marcel-lavrigne-client</module>
-        <module>marcel-lavrigne-web</module>     
+        <module>marcel-lavigne-model</module>
+        <module>marcel-lavigne-persistence</module>
+        <module>marcel-lavigne-validator</module>
+        <module>marcel-lavigne-security</module>
+        <module>marcel-lavigne-services</module>
+        <module>marcel-lavigne-client</module>
+        <module>marcel-lavigne-web</module>     
     </modules>
 
     <properties>
