@@ -11,9 +11,6 @@ public class UserSettings extends MarcelLavigneEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id")
-    private Integer userId;
-
     private Locale locale;
 
     @Column(name = "notify_new_message")
@@ -35,14 +32,6 @@ public class UserSettings extends MarcelLavigneEntity {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
     }
 
     public Locale getLocale() {

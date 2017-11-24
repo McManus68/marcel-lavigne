@@ -1,3 +1,13 @@
+CREATE TABLE `user_settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(6) DEFAULT 'fr_FR',
+  `notify_new_message` tinyint(1) DEFAULT '0',
+  `notify_new_event` tinyint(1) DEFAULT '0',
+  `notify_subscription_approved` tinyint(1) DEFAULT '1',
+  `notify_subscription_rejected` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8,21 +18,9 @@ CREATE TABLE `user` (
   `mail` varchar(50) DEFAULT NULL,
   `city` varchar(30) DEFAULT NULL,
   `role` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE `user_settings` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `locale` varchar(6) DEFAULT 'fr_FR',
-  `notify_new_message` tinyint(1) DEFAULT '0',
-  `notify_new_event` tinyint(1) DEFAULT '0',
-  `notify_subscription_approved` tinyint(1) DEFAULT '1',
-  `notify_subscription_rejected` tinyint(1) DEFAULT '1',
-  `user_id` int(11) NOT NULL,
+  `settings_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_Settings_User_idx` (`user_id`),
-  CONSTRAINT `FK_Settings_User` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_User_Settings`  FOREIGN KEY (`settings_id`)   REFERENCES `user_settings` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

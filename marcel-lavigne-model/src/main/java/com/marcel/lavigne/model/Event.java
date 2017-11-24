@@ -2,8 +2,8 @@ package com.marcel.lavigne.model;
 
 import com.marcel.lavigne.model.enumeration.EventType;
 
+import com.vividsolutions.jts.geom.Point;
 import javax.persistence.*;
-import java.awt.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -18,9 +18,10 @@ public class Event extends MarcelLavigneEntity {
 
 	private String content;
 
+    @Enumerated(EnumType.STRING)
 	private EventType type;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "owner_id", referencedColumnName = "id")
 	private User owner;
 
@@ -38,7 +39,7 @@ public class Event extends MarcelLavigneEntity {
 
 	private Double price;
 
-    @OneToMany(mappedBy = "event")
+    @OneToMany(mappedBy = "event", fetch = FetchType.LAZY)
 	private List<Comment> comments;
 
 	@Column(name = "auto_accept_subscription")

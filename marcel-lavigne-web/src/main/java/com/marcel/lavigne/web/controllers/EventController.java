@@ -11,16 +11,4 @@ import java.util.List;
 @RestController
 @RequestMapping("rest/events")
 public class EventController extends EntityController<Event> {
-
-    @Override
-    @GetMapping
-    public List<Event> getAll() {
-        List<Event> events = new ArrayList<>();
-        Event e = new Event();
-        e.setContent("coud sus");
-        e.setId(2l);
-        e.setName("pwet");
-        events.add(e);
-        return events;
-    }
 }

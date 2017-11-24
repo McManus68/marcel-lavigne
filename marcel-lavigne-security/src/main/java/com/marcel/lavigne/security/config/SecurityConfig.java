@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers(HttpMethod.POST, "/rest/login").permitAll()
                 .antMatchers(HttpMethod.GET, "/swagger-ui.html**").permitAll()
-                .antMatchers("/rest/**").authenticated()
+                .antMatchers("/rest/**").permitAll()
                 .and()
                 .addFilterBefore(new JwtLoginFilter("/rest/login", authenticationManager()),
                         UsernamePasswordAuthenticationFilter.class)

@@ -23,12 +23,12 @@ public class User extends MarcelLavigneEntity  {
 
 	private String city;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "settings_id")
+    private UserSettings settings;
+
 	@Enumerated(EnumType.STRING)
 	private RoleName role;
-
-	@OneToOne
-	@JoinColumn(name = "user_id")
-	private UserSettings settings;
 
 	@Override
 	public Long getId() {
@@ -93,5 +93,13 @@ public class User extends MarcelLavigneEntity  {
 
 	public void setRole(RoleName role) {
 		this.role = role;
+	}
+
+	public UserSettings getSettings() {
+		return settings;
+	}
+
+	public void setSettings(UserSettings settings) {
+		this.settings = settings;
 	}
 }
