@@ -7,10 +7,6 @@ import java.time.LocalDateTime;
 @Table(name = "news")
 public class News extends MarcelLavigneEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private String title;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -24,15 +20,6 @@ public class News extends MarcelLavigneEntity {
 
     @Column(name = "last_modification_date")
     private LocalDateTime last_modification_date;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;

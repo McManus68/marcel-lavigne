@@ -11,9 +11,6 @@ import java.util.List;
 @Table(name = "event")
 public class Event extends MarcelLavigneEntity {
 
-	@Id	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
 	private String name;
 
 	private String content;
@@ -46,15 +43,6 @@ public class Event extends MarcelLavigneEntity {
 	private boolean autoAcceptSubscsription;
 
 	private LocalDateTime date;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

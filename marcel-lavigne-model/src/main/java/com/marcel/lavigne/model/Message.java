@@ -7,10 +7,6 @@ import java.time.LocalDateTime;
 @Table(name = "message")
 public class Message extends MarcelLavigneEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "from_id", referencedColumnName = "id")
     private User from;
@@ -26,15 +22,6 @@ public class Message extends MarcelLavigneEntity {
     private String content;
 
     private LocalDateTime date;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public User getFrom() {
         return from;

@@ -9,10 +9,6 @@ import java.time.LocalDateTime;
 @Table(name = "notification")
 public class Notification extends MarcelLavigneEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private NotificationType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -26,15 +22,6 @@ public class Notification extends MarcelLavigneEntity {
     private LocalDateTime date;
 
     private Boolean read;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public NotificationType getType() {
         return type;

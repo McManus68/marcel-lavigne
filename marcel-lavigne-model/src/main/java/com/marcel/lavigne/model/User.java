@@ -8,9 +8,6 @@ import javax.persistence.*;
 @Table(name = "user")
 public class User extends MarcelLavigneEntity  {
 
-	@Id	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
 	private String login;
 
 	private String password;
@@ -29,15 +26,6 @@ public class User extends MarcelLavigneEntity  {
 
 	@Enumerated(EnumType.STRING)
 	private RoleName role;
-
-	@Override
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getLogin() {
 		return login;

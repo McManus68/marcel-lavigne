@@ -7,10 +7,6 @@ import java.util.Locale;
 @Table(name = "user_settings")
 public class UserSettings extends MarcelLavigneEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private Locale locale;
 
     @Column(name = "notify_new_message")
@@ -24,15 +20,6 @@ public class UserSettings extends MarcelLavigneEntity {
 
     @Column(name = "notify_subscription_rejected")
     private Boolean notifySubscriptionRejected;
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Locale getLocale() {
         return locale;
