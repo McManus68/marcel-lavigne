@@ -2,19 +2,47 @@
 
 .header {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   height: 80px;
   background: $header-color;
+}
+
+.header #title {
+  color: $primary-color;
   font-weight: 600;
 }
 
-.header img {
+.header .logo {
   width: 160px;
   height: 80px;
   padding: 10px;
 }
 
 .header .controls {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: 20px;
+}
+
+.header .welcome {
+  margin-left: 30px;
+  font-size: 0.9em;
+}
+
+.header .avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+}
+
+.header .firstname {
+  color: $primary-color;  
+}
+
+.header .sidebar {
+  color: lightgrey;
+  cursor: pointer;
 }
