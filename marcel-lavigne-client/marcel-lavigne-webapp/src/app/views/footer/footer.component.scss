@@ -1,0 +1,38 @@
+@import '../../../assets/_variables';
+
+.footer {
+  height: 200px;
+  text-align: center;
+  background: $dark-grey;
+}
+
+.footer .icon {
+  color: $medium-grey;
+}
+
+.footer .logo {
+  width: 120px;
+  height: 80px;
+}
+
+.footer .row {
+  height: 100%;
+}
+
+.footer .policy {
+  background: #1f2a2f;
+  color: $medium-grey;
+  padding: 10px;
+  height: 40px;
+}
+
+.footer h1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: $medium-grey;
+}
+
+.footer h2 {
+  font-size: 14px;
+  color: white;
+}

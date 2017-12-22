@@ -19,9 +19,14 @@ import { AppComponent }  from './app.component';
 import { LoginComponent } from './views/login/login.component';
 import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent }  from './views/header/header.component';
+import { FooterComponent }  from './views/footer/footer.component';
 
 /********************** CUSTOM COMPONENTS **********************/
 import { ButtonIconComponent }  from './components/button-icon/button-icon.component';
+
+import {Component, ViewEncapsulation} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,7 @@ import { ButtonIconComponent }  from './components/button-icon/button-icon.compo
     LoginComponent,
     HomeComponent,
     HeaderComponent,
+    FooterComponent,
     ButtonIconComponent
   ],
   imports: [
