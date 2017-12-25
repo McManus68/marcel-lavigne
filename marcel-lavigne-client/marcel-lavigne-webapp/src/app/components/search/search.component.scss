@@ -1,0 +1,27 @@
+@import '../../../assets/_variables';
+
+.search {
+  padding: 15px;
+  border: none;
+}
+
+.search .mat-expansion-panel {
+  box-shadow: none;
+  background-color: #FAFAFA;
+}
+
+.search .mat-expansion-panel-header:hover {
+  background-color: #FAFAFA;
+}
+
+.search .mat-expansion-panel-header-description {
+  justify-content: flex-end;
+}
+
+.search .mat-form-field {
+  display: inline;
+}
+
+.search .search-box {
+  display: flex;
+}
