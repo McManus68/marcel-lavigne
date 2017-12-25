@@ -18,6 +18,18 @@
   justify-content: flex-end;
 }
 
+.search .mat-slider {
+  height: 110px;
+}
+
+.search .around-me span {
+  color: $light-grey;
+}
+
+.search .mat-slider-horizontal {
+  width: 300px;
+}
+
 .search .mat-form-field {
   display: inline;
 }

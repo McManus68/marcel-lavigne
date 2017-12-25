@@ -10,20 +10,28 @@
       <button mat-raised-button color="primary">Rechercher</button>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>        
-            <mat-panel-description> Afficher les paramètres avancées </mat-panel-description>
-          </mat-expansion-panel-header>
 
-          <mat-form-field>
-            <input matInput placeholder="Age">
-          </mat-form-field>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-description> </mat-panel-description>
+    </mat-expansion-panel-header>
 
-        </mat-expansion-panel>
-      </mat-accordion>
+    <div class="row row align-items-center">
+      <div class="col">
+        <h2> Type de dégustation </h2>
+        <ml-liquor-toggle></ml-liquor-toggle>
+      </div>
+      <div class="col around-me">
+        <div class="row">
+          <div class="col"> <h2> Rayon </h2> </div>
+          <div class="col"> <mat-slide-toggle color="primary" checked="true"> Autour de moi </mat-slide-toggle> </div>
+        </div>
+        <span> 1km </span> <mat-slider min="1" max="50" step="1" value="20" color="primary"></mat-slider> <span> 50km </span>
+      </div>
     </div>
-  </div>
+
+
+
+  </mat-expansion-panel>
+
 </div>

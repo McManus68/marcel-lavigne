@@ -1,0 +1,21 @@
+@import '../../../assets/_variables';
+
+.liquor {
+  padding: 15px;
+  border: none;
+}
+
+.liquor .mat-icon {
+  width: 100px;
+  height: 80px;
+}
+
+.liquor .btn-secondary {
+  background-color: inherit;
+  border-color: $light-grey;
+  padding: 15px;
+}
+
+.liquor .btn-secondary:hover {
+    background-color: $light-grey;
+}
