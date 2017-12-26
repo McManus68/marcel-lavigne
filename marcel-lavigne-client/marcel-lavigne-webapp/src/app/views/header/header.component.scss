@@ -1,4 +1,4 @@
-@import '../../../assets/_variables';
+@import '../../../assets/css/_variables';
 
 .header {
   display: flex;
@@ -15,9 +15,10 @@
 }
 
 .header .logo {
-  width: 160px;
-  height: 80px;
+  width: 140px;
+  height: 70px;
   padding: 10px;
+  padding-bottom: 20px;
 }
 
 .header .controls {
@@ -29,7 +30,6 @@
 
 .header .welcome {
   margin-left: 30px;
-  font-size: 0.9em;
 }
 
 .header .avatar {
@@ -46,4 +46,5 @@
 .header .sidebar {
   color: lightgrey;
   cursor: pointer;
+  margin-left: 15px;
 }

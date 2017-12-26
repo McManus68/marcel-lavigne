@@ -6,22 +6,19 @@
         <input matInput placeholder="Trouver un évènement">
       </mat-form-field>
     </div>
-    <div class="col-2">
+    <div class="col-3">
       <button mat-raised-button color="primary">Rechercher</button>
+      <mat-icon class="show-advanced" color="primary" data-toggle="collapse" href="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch"> settings </mat-icon>
     </div>
   </div>
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-description> </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <div class="row row align-items-center">
+  <div id="advancedSearch" class="collapse">
+    <div class="row align-items-center">
       <div class="col">
         <h2> Type de dégustation </h2>
         <ml-liquor-toggle></ml-liquor-toggle>
       </div>
-      <div class="col around-me">
+      <div class="col">
         <div class="row">
           <div class="col"> <h2> Rayon </h2> </div>
           <div class="col"> <mat-slide-toggle color="primary" checked="true"> Autour de moi </mat-slide-toggle> </div>
@@ -29,9 +26,6 @@
         <span> 1km </span> <mat-slider min="1" max="50" step="1" value="20" color="primary"></mat-slider> <span> 50km </span>
       </div>
     </div>
-
-
-
-  </mat-expansion-panel>
+  </div>
 
 </div>

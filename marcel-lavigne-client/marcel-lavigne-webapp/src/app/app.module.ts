@@ -22,9 +22,9 @@ import { HeaderComponent }  from './views/header/header.component';
 import { FooterComponent }  from './views/footer/footer.component';
 
 /********************** CUSTOM COMPONENTS **********************/
-import { ButtonIconComponent }  from './components/button-icon/button-icon.component';
 import { SearchComponent }  from './components/search/search.component';
 import { LiquorToggleComponent }  from './components/liquor-toggle/liquor-toggle.component';
+import { CarouselEventsComponent }  from './components/carousel-events/carousel-events.component';
 
 import {Component, ViewEncapsulation} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -37,9 +37,9 @@ import {MatIconRegistry} from '@angular/material';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    LiquorToggleComponent,
-    ButtonIconComponent,
-    SearchComponent
+    LiquorToggleComponent,    
+    SearchComponent,
+    CarouselEventsComponent
   ],
   imports: [
     BrowserModule,

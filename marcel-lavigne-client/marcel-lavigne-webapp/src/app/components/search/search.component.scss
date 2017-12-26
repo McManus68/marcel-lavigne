@@ -1,4 +1,4 @@
-@import '../../../assets/_variables';
+@import '../../../assets/css/_variables';
 
 .search {
   padding: 15px;
@@ -20,6 +20,15 @@
 
 .search .mat-slider {
   height: 110px;
+}
+
+.search #advancedSearch {
+  margin-top: 15px;
+}
+
+.search .show-advanced {
+  cursor: pointer;
+  vertical-align: middle;
 }
 
 .search .around-me span {
