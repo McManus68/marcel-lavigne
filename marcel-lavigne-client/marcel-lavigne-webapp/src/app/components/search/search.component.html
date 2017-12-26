@@ -6,9 +6,9 @@
         <input matInput placeholder="Trouver un évènement">
       </mat-form-field>
     </div>
-    <div class="col-3">
+    <div class="col-md-auto">
       <button mat-raised-button color="primary">Rechercher</button>
-      <mat-icon class="show-advanced" color="primary" data-toggle="collapse" href="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch"> settings </mat-icon>
+      <mat-icon (click)="rotate()" [@rotatedState]='state' class="show-advanced" color="primary" data-toggle="collapse" href="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch"> expand_more </mat-icon>
     </div>
   </div>
 
