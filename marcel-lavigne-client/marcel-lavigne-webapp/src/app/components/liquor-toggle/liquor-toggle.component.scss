@@ -1,21 +1,20 @@
 @import '../../../assets/css/_variables';
 
 .liquor {
-  padding: 15px;
-  border: none;
+  margin-bottom: 20px;
+}
+.liquor .mat-button-toggle {
+  color: white;
+  padding: 5px;
+  border: solid $foreground-text-color 2px;
+  background: $secondary-color;
+}
+
+.liquor .mat-button-toggle-checked {
+  color: $primary-color;
 }
 
 .liquor .mat-icon {
-  width: 100px;
-  height: 80px;
-}
-
-.liquor .btn-secondary {
-  background-color: inherit;
-  border-color: light-grey;
-  padding: 15px;
-}
-
-.liquor .btn-secondary:hover {
-    background-color: light-grey;
+  width: 50px;
+  height: 30px;
 }

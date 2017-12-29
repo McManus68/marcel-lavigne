@@ -1,0 +1,66 @@
+<div class="container-fluid create-event">
+    <h1> Créer un évènement</h1>
+    <form class="form">
+      <div class="d-flex flex-column">
+
+        <mat-form-field class="p-2">
+          <input matInput placeholder="Nom de l'évènement">
+        </mat-form-field>
+
+        <div class="d-flex flex-row">
+          <mat-form-field class="p-2">
+            <input matInput [matDatepicker]="picker" placeholder="Choisir la date de l'évènement">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="p-2">
+            <mat-select placeholder="Heure">
+              <mat-option *ngFor="let hour of hours" [value]="hour">
+                {{ hour }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="p-2">
+            <mat-select placeholder="Minute">
+              <mat-option *ngFor="let minute of minutes" [value]="minute">
+                {{ minute }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="mat-form-field" class="p-2">
+          <label class="label"> Type de spiritueux </label>
+          <ml-liquor-toggle></ml-liquor-toggle>
+        </div>
+
+        <div class="p-2">
+          <mat-slide-toggle labelPosition="before" color="primary"> Accepter automatiquement les demandes de participation?</mat-slide-toggle>
+        </div>
+
+        <mat-form-field class="p-2">
+          <textarea matInput placeholder="Address"></textarea>
+        </mat-form-field>
+
+        <div class="d-flex flex-row">
+          <mat-form-field class="p-2">
+            <input matInput placeholder="Ville">
+          </mat-form-field>
+          <mat-form-field class="p-2">
+            <input matInput maxlength="5" placeholder="Code Postal">
+          </mat-form-field>
+        </div>
+
+        <mat-form-field class="phone">
+          <span matPrefix>+33 &nbsp;</span>
+          <input type="tel" matInput placeholder="Telephone">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+
+           <button mat-raised-button color="accent">Créer l'évènement</button>
+
+      </div>
+    </form>
+</div>

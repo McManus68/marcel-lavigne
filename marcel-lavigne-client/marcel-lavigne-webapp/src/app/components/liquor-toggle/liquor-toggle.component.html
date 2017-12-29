@@ -1,7 +1,16 @@
 <div class="liquor">
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <mat-icon svgIcon="wine" color="primary" class="btn btn-secondary"></mat-icon>
-    <mat-icon svgIcon="beer" color="primary" class="btn btn-secondary"></mat-icon>
-    <mat-icon svgIcon="champaign" color="primary" class="btn btn-secondary"></mat-icon>
-  </div>
+  <mat-button-toggle-group>
+    <mat-button-toggle value="wine">
+      <mat-icon svgIcon="wine"></mat-icon>
+      Vin
+    </mat-button-toggle>
+    <mat-button-toggle value="beer">
+      <mat-icon svgIcon="beer"></mat-icon>
+      Bière
+    </mat-button-toggle>
+    <mat-button-toggle value="champaign">
+      <mat-icon svgIcon="champaign"></mat-icon>
+      Champagne
+    </mat-button-toggle>
+  </mat-button-toggle-group>
 </div>

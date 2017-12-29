@@ -1,25 +1,57 @@
-<div class="row justify-content-center">
+<div class="events row justify-content-center">
 
-  <div id="carousel-events" class="carousel slide" data-interval="false" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li *ngFor="let image of images; let i = index" data-target="#carousel-events" data-slide-to="0" [ngClass]="{'active': i === 0 }" ></li>
-    </ol>
-
-    <div class="carousel-inner" role="listbox">
-      <div *ngFor="let image of images; let i = index" class="carousel-item" [ngClass]="{'active': i === 0 }">
-        <img class="d-block img-fluid" src="../../assets/images/events/{{image}}" alt="{{image}}">
+  <mat-card>
+    <mat-card-header class="d-flex align-items-center flex-row">
+      <div mat-card-avatar>
+        <img class="avatar" src="../../assets/images/tintin.png" alt="Avatar">
       </div>
+      <mat-card-title>
+         <div class="d-flex align-items-center">
+           <mat-icon color="primary">date_range</mat-icon>
+           <span> 15 janvier 20h30 </span>
+         </div>
+      </mat-card-title>
+      <mat-card-subtitle>
+        The wine bar
+           <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon>
+      </mat-card-subtitle>
+      <span class="d-flex ml-auto mr-auto name">Soirée dégustation de vins italiens</span>
+      <div class="d-flex align-items-center justify-content-end participants">
+         <mat-icon>group</mat-icon>
+         <span> 5/25 </span>
+      </div>
+
+    </mat-card-header>
+
+    <div id="carousel-events" class="carousel slide" data-interval="false" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li *ngFor="let image of images; let i = index" data-target="#carousel-events" data-slide-to="0" [ngClass]="{'active': i === 0 }" ></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div *ngFor="let image of images; let i = index" class="carousel-item" [ngClass]="{'active': i === 0 }">
+          <img class="d-block img-fluid" src="../../assets/images/events/{{image}}" alt="{{image}}">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-events" data-slide="prev">
+         <mat-icon color="primary">chevron_left</mat-icon>
+      </a>
+      <a class="carousel-control-next" href="#carousel-events" data-slide="next">
+         <mat-icon color="primary">chevron_right</mat-icon>
+      </a>
     </div>
+    <mat-card-content>
+      <p>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-fab>
+        <mat-icon color="primary">favorite</mat-icon>
+      </button>
+      <button mat-fab>
+        <mat-icon color="primary">attach_money</mat-icon>
+      </button>
+    </mat-card-actions>
+</mat-card>
 
-    <a class="carousel-control-prev" href="#carousel-events" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-
-    <a class="carousel-control-next" href="#carousel-events" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-
-  </div>
 </div>

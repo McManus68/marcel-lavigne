@@ -20,7 +20,7 @@ import { LoginComponent } from './views/login/login.component';
 import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent }  from './views/header/header.component';
 import { FooterComponent }  from './views/footer/footer.component';
-
+import { CreateEventComponent }  from './views/event/create/create-event.component';
 /********************** CUSTOM COMPONENTS **********************/
 import { SearchComponent }  from './components/search/search.component';
 import { LiquorToggleComponent }  from './components/liquor-toggle/liquor-toggle.component';
@@ -37,9 +37,10 @@ import {MatIconRegistry} from '@angular/material';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    LiquorToggleComponent,    
+    LiquorToggleComponent,
     SearchComponent,
-    CarouselEventsComponent
+    CarouselEventsComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,

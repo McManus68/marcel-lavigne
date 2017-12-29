@@ -1,6 +1,50 @@
 @import '../../../assets/css/_variables';
 
+.events {
+}
+
+.events .mat-card {
+  box-shadow: none;
+}
+
+.events .name {  
+  font-size: 1.4em;
+}
+
+.events .participants {
+  align-content: end;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.events .mat-card-title {
+  color: $primary-color;
+}
+
+.events .mat-card-subtitle {
+  display: flex;
+  align-items: center;
+}
+.events .mat-card-subtitle .mat-icon {
+  font-size: 1.2em;
+}
+
+.events .mat-card-actions {
+  margin-left: 15px;
+}
+
+.events .mat-card-actions button {
+  margin-right: 15px;
+}
+
 #carousel-events .img-fluid {
   width: 800px;
   height: 600px;
+  margin: auto;
+}
+
+#carousel-events .mat-icon {
+  font-size: 4em;
+}
+.carousel-indicators li.active {
+  background-color: $primary-color;
 }
