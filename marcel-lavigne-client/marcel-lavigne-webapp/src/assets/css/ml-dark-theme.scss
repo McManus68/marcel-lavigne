@@ -1,0 +1,5 @@
+$ml-dark-theme-primary: mat-palette($mat-blue, A200, A100, A400);
+$ml-dark-theme-accent:  mat-palette($mat-green, A200, A100, A400);
+$ml-dark-theme-warn:    mat-palette($mat-red);
+
+$ml-dark-theme: mat-dark-theme($ml-dark-theme-primary, $ml-dark-theme-accent, $ml-dark-theme-warn);

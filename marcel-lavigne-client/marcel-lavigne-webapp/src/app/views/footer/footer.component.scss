@@ -3,11 +3,11 @@
 .footer {
   height: 200px;
   text-align: center;
-  background: $dark-grey;
+  background: $footer-color;
 }
 
 .footer .icon {
-  color: $medium-grey;
+  color: $footer-color-lighter;
 }
 
 .footer .logo {
@@ -20,8 +20,8 @@
 }
 
 .footer .policy {
-  background: #1f2a2f;
-  color: $medium-grey;
+  background: $footer-color-darker;
+  color: $footer-color-lighter;
   padding: 10px;
   height: 40px;
 }
@@ -29,7 +29,7 @@
 .footer h1 {
   font-size: 16px;
   font-weight: bold;
-  color: $medium-grey;
+  color: $footer-color-lighter;
 }
 
 .footer h2 {

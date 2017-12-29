@@ -1,23 +1,36 @@
-@import "_variables.scss";
+@import '~@angular/material/theming';
 
+// Import fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:700');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// always include only once per project
+@include mat-core();
+
+// import our custom themes
+@import 'ml-theme.scss';
+@import 'ml-dark-theme.scss';
+
+// Several themes
+.ml-theme {
+  @include angular-material-theme($ml-theme);
+}
+
+.ml-dark-theme {
+  @include angular-material-theme($ml-dark-theme);
+}
 
 body {
   font-size:13px;
   font-family: 'Nunito', sans-serif;
 }
-.title {
-  font-family: 'Nunito', sans-serif;
-}
 
 h2 {
-  font-family: 'Nunito';
   font-weight: bold;
   font-size: 18px;
 }
 
 .mat-slide-toggle-content {
-  font: inherit !important;  
+  font: inherit !important;
 }
