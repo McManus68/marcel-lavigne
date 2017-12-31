@@ -1,16 +1,20 @@
-<div class="header">
-  <mat-icon svgIcon="logo" class="logo" color="primary"></mat-icon>
-  <span id="title" i18n>Se rencontrer par le vin</span>
-  <div class="controls">
-
-      <button mat-button color="primary" routerLink="create-event">
-    	<mat-icon aria-label="Trouver un évènement">add_circle_outline</mat-icon>
-    	Créer un évènement
-  	  </button>
-
-      <span class="welcome" i18n>Bienvenue,</span>
-      <img class="avatar" src="../../assets/images/avatar.jpg" alt="Avatar">
-      <span class="firstname">Emmanuel</span>
-      <i class="material-icons sidebar">view_headline</i>
+<mat-toolbar class="header flex-column flex-md-row">
+  <div class="d-flex align-items-center">
+    <mat-icon svgIcon="logo" class="logo" color="primary"></mat-icon>
+    <span class="p-2 title"> Se rencontrer par le vin </span>
   </div>
-</div>
+
+  <div class="ml-auto d-flex align-items-center p-2">
+    <button color="primary" mat-button routerLink="create-event">
+    <mat-icon>add_circle_outline</mat-icon>
+      Créer un évènement
+    </button>
+
+    <span class="welcome" i18n>Bienvenue,</span>
+    <img class="avatar" src="../../assets/images/avatar.jpg" alt="Avatar">
+    <span>Emmanuel</span>
+    <button color="primary" mat-icon-button>
+      <mat-icon>view_headline</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

@@ -9,13 +9,11 @@ $primary: map-get($theme, primary);
 $accent: map-get($theme, accent);
 $warn: map-get($theme, accent);
 $foreground: map-get($theme, foreground);
-//$background: map-get($theme, background);
+$background: map-get($theme, background);
 
 // Définition des variables selon le thème
 $primary-color:  mat-color($primary);
 $secondary-color:  mat-color($accent);
-$foreground-text-color: mat-color($foreground, secondary-text);
-
-$footer-color-darker: #1f2a2f;
-$footer-color: #263238;
-$footer-color-lighter: #607D8B;
+$foreground-color: mat-color($foreground, secondary-text);
+$background-color: mat-color($background, background);
+$background-color-darker: mat-color($background, app-bar);

@@ -1,27 +1,23 @@
 @import '../../../assets/css/_variables';
 
 .footer {
-  height: 200px;
   text-align: center;
-  background: $footer-color;
+  background: $background-color;
 }
 
 .footer .icon {
-  color: $footer-color-lighter;
+  color: $foreground-color;
 }
 
 .footer .logo {
   width: 120px;
   height: 80px;
-}
-
-.footer .row {
-  height: 100%;
+  color: $foreground-color;
 }
 
 .footer .policy {
-  background: $footer-color-darker;
-  color: $footer-color-lighter;
+  background: $background-color-darker;
+  color: $foreground-color;
   padding: 10px;
   height: 40px;
 }
@@ -29,10 +25,9 @@
 .footer h1 {
   font-size: 16px;
   font-weight: bold;
-  color: $footer-color-lighter;
 }
 
 .footer h2 {
   font-size: 14px;
-  color: white;
+  color: $foreground-color;
 }

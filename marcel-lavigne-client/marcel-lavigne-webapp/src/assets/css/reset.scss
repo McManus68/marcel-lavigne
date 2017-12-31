@@ -1,15 +1,28 @@
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: auto;
+}
+
 .mat-slide-toggle-content {
   font: inherit !important;
 }
 
-.mat-card {
+.mat-toolbar {
   font: inherit !important;
+}
+
+
+.mat-card {
+  font-family: 'Nunito', sans-serif;
 }
 
 .mat-form-field {
-  font: inherit !important;
+  font-family: 'Nunito', sans-serif;
 }
 
 .mat-button-toggle {
-  font: inherit !important;
+  font-family: 'Nunito', sans-serif;
+}
+
+.mat-button, .mat-raised-button, .mat-icon-button, .mat-fab, .mat-mini-fab {
+  font-family: 'Nunito', sans-serif;
 }

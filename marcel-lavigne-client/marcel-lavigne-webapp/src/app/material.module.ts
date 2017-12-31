@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatOptionModule, MatSelectModule } from '@angular/material';
 import { MatNativeDateModule, MatIconModule, MatIconRegistry, MatExpansionModule, MatSliderModule, MatSlideToggleModule, MatCardModule } from '@angular/material';
-import { MatButtonToggleModule } from '@angular/material';
+import { MatButtonToggleModule, MatToolbarModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { DomSanitizer } from '@angular/platform-browser';
     MatSliderModule,
     MatSlideToggleModule,
     MatCardModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatToolbarModule
   ],
   exports: [
     FormsModule,
@@ -43,7 +44,8 @@ import { DomSanitizer } from '@angular/platform-browser';
     MatSliderModule,
     MatSlideToggleModule,
     MatCardModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatToolbarModule
   ],
 })
 
