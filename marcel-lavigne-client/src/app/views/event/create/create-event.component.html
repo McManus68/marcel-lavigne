@@ -1,66 +1,108 @@
-<div class="container-fluid create-event">
-    <h1> Créer un évènement</h1>
-    <form class="form">
-      <div class="d-flex flex-column">
+<mat-card class="create-event p-2 m-3">
+  <!--button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button-->
+  <h1> Créer un évènement</h1>
 
-        <mat-form-field class="p-2">
-          <input matInput placeholder="Nom de l'évènement">
+  <mat-horizontal-stepper [linear]="isLinear">
+
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Description</ng-template>
+
+        <mat-form-field class="w-100">
+          <mat-icon matPrefix>local_bar</mat-icon>
+          <input matInput [(ngModel)]="event.name" placeholder="Nom à l'évènement" formControlName="firstCtrl" required>
+          <button mat-button *ngIf="event.name" matSuffix mat-icon-button color="primary" (click)="event.name=''">
+           <mat-icon>close</mat-icon>
+         </button>
         </mat-form-field>
 
-        <div class="d-flex flex-row">
-          <mat-form-field class="p-2">
-            <input matInput [matDatepicker]="picker" placeholder="Choisir la date de l'évènement">
+        <div class="row">
+          <mat-form-field color="primary" class="col">
+            <mat-icon matPrefix>timer</mat-icon>
+            <input matInput [matDatepicker]="picker" placeholder="Quel jour?">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
 
-          <mat-form-field class="p-2">
-            <mat-select placeholder="Heure">
-              <mat-option *ngFor="let hour of hours" [value]="hour">
-                {{ hour }}
-              </mat-option>
-            </mat-select>
+          <mat-form-field class="col">
+            <mat-icon matPrefix>timer</mat-icon>
+            <mat-select placeholder="Quelle heure?">
+               <mat-option *ngFor="let hour of hours" [value]="hour">
+                 {{ hour }}
+               </mat-option>
+             </mat-select>
+             <span matSuffix>Heures</span>
+         </mat-form-field>
+       </div>
+
+       <div class="row align-items-center mt-3">
+         <div class="col">
+           <ml-liquor-toggle></ml-liquor-toggle>
+         </div>
+         <div class="col">
+           <mat-form-field>
+            <mat-icon matPrefix>attach_money</mat-icon>
+            <input matInput placeholder="Prix / personne" type="number">
+            <span matSuffix>Euros</span>
           </mat-form-field>
-
-          <mat-form-field class="p-2">
-            <mat-select placeholder="Minute">
-              <mat-option *ngFor="let minute of minutes" [value]="minute">
-                {{ minute }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
         </div>
+         <div class="col">
+           <mat-slide-toggle color="primary"> Valider les demandes de participations?</mat-slide-toggle>
+         </div>
 
-        <div class="mat-form-field" class="p-2">
-          <label class="label"> Type de spiritueux </label>
-          <ml-liquor-toggle></ml-liquor-toggle>
+       </div>
+
+        <div class="d-flex justify-content-end">
+          <button mat-fab matStepperNext color="primary">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
         </div>
+      </form>
+    </mat-step>
 
-        <div class="p-2">
-          <mat-slide-toggle labelPosition="before" color="primary"> Accepter automatiquement les demandes de participation?</mat-slide-toggle>
-        </div>
-
-        <mat-form-field class="p-2">
-          <textarea matInput placeholder="Address"></textarea>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Localisation</ng-template>
+        <mat-form-field class="w-100">
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
         </mat-form-field>
 
-        <div class="d-flex flex-row">
-          <mat-form-field class="p-2">
+        <div class="row">
+          <mat-form-field class="col">
             <input matInput placeholder="Ville">
           </mat-form-field>
-          <mat-form-field class="p-2">
-            <input matInput maxlength="5" placeholder="Code Postal">
+          <mat-form-field class="col">
+            <input matInput placeholder="Département">
           </mat-form-field>
-        </div>
+          <mat-form-field class="col">
+            <input matInput #postalCode maxlength="5" placeholder="Code postal">
+            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+          </mat-form-field>
+       </div>
 
-        <mat-form-field class="phone">
-          <span matPrefix>+33 &nbsp;</span>
-          <input type="tel" matInput placeholder="Telephone">
-          <mat-icon matSuffix>mode_edit</mat-icon>
-        </mat-form-field>
+       <div class="row">
+         <div class="col text-left">
+           <button mat-fab matStepperPrevious color="primary">
+             <mat-icon>arrow_backward</mat-icon>
+           </button>
+         </div>
+         <div class="col text-right">
+           <button mat-fab matStepperNext color="primary">
+             <mat-icon>arrow_forward</mat-icon>
+           </button>
+         </div>
+       </div>
 
-           <button mat-raised-button color="accent">Créer l'évènement</button>
+      </form>
+    </mat-step>
 
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
       </div>
-    </form>
-</div>
+    </mat-step>
+
+  </mat-horizontal-stepper>
+</mat-card>

@@ -1,11 +1,15 @@
 @import '../../../assets/css/_variables';
 
+.search {
+  border-radius: 6px;
+}
+
 .search #advancedSearch {
   margin-top: 15px;
 }
 
 .search .show-advanced {
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .search .mat-slider-horizontal {

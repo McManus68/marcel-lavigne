@@ -1,13 +1,14 @@
 @import '../../../assets/css/_variables';
 
-.liquor {
-  margin-bottom: 20px;
+.liquor .mat-button-toggle-group {
+  box-shadow: none;
+
+
 }
+
 .liquor .mat-button-toggle {
-  color: white;
-  padding: 5px;
-  border: solid $foreground-color 1px;
-  color: $foreground-color;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .liquor .mat-button-toggle-checked {

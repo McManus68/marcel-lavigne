@@ -1,8 +1,11 @@
 <mat-card class="search p-2 m-3">
   <div class="d-flex align-items-center">
     <mat-form-field class="col">
-      <mat-icon matPrefix>search</mat-icon>
-      <input matInput placeholder="Trouver un évènement">
+      <mat-icon matPrefix color="primary">search</mat-icon>
+      <input matInput [(ngModel)]="value" placeholder="Trouver un évènement">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Rechercher" color="primary" (click)="value=''">
+       <mat-icon>close</mat-icon>
+     </button>
     </mat-form-field>
     <div class="d-inline-flex align-items-center">
       <button mat-raised-button color="primary">Rechercher</button>

@@ -2,9 +2,20 @@
 
 .label {
   color: $foreground-color;
-  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  margin-left: 25px;
 }
 
 .mat-slide-toggle-label {
   color: $foreground-color;
+}
+
+.mat-form-field-infix {
+  font-size: 1.4em;
+  margin-left: 10px;
+}
+
+.mat-horizontal-stepper-header-container {
+  margin-bottom: 30px
 }
