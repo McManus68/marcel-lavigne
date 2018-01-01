@@ -1,48 +1,14 @@
 @import '../../../assets/css/_variables';
 
-.search {
-  padding: 15px;
-  border: none;
-}
-
-.search .mat-expansion-panel {
-  box-shadow: none;
-  background-color: #FAFAFA;
-}
-
-.search .mat-expansion-panel-header:hover {
-  background-color: #FAFAFA;
-}
-
-.search .mat-expansion-panel-header-description {
-  justify-content: flex-end;
-}
-
-.search .mat-slider {
-  height: 110px;
-}
-
 .search #advancedSearch {
   margin-top: 15px;
 }
 
 .search .show-advanced {
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.search .around-me span {
-  color: light-grey;
+  cursor: pointer;  
 }
 
 .search .mat-slider-horizontal {
-  width: 300px;
-}
-
-.search .mat-form-field {
-  display: inline;
-}
-
-.search .search-box {
-  display: flex;
+  width: 100%;
+  min-width: 200px;
 }

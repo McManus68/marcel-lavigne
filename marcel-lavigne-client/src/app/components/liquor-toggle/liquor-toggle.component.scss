@@ -6,8 +6,8 @@
 .liquor .mat-button-toggle {
   color: white;
   padding: 5px;
-  border: solid $foreground-color 2px;
-  background: $secondary-color;
+  border: solid $foreground-color 1px;
+  color: $foreground-color;
 }
 
 .liquor .mat-button-toggle-checked {

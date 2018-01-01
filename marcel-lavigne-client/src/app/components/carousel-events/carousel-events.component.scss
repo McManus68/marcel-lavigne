@@ -1,35 +1,30 @@
 @import '../../../assets/css/_variables';
 
 .events {
+  color: $foreground-color;
+}
+
+.events .date {
+  color: $primary-color;
+}
+
+.events .star {
+  font-size: 0.9em;
+  width: 12px;
+  height: 12px;
 }
 
 .events .mat-card {
   box-shadow: none;
 }
 
-.events .name {  
+.events .title {
   font-size: 1.4em;
-}
-
-.events .participants {
-  align-content: end;
-  color: rgba(0, 0, 0, 0.54);
-}
-
-.events .mat-card-title {
-  color: $primary-color;
-}
-
-.events .mat-card-subtitle {
-  display: flex;
-  align-items: center;
-}
-.events .mat-card-subtitle .mat-icon {
-  font-size: 1.2em;
 }
 
 .events .mat-card-actions {
   margin-left: 15px;
+  height: 100px;
 }
 
 .events .mat-card-actions button {
