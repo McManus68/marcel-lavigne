@@ -21,10 +21,14 @@ import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent }  from './views/header/header.component';
 import { FooterComponent }  from './views/footer/footer.component';
 import { CreateEventComponent }  from './views/event/create/create-event.component';
+
 /********************** CUSTOM COMPONENTS **********************/
 import { SearchComponent }  from './components/search/search.component';
 import { LiquorToggleComponent }  from './components/liquor-toggle/liquor-toggle.component';
 import { CarouselEventsComponent }  from './components/carousel-events/carousel-events.component';
+import { StepperNextComponent,  }  from './components/stepper/stepper-next.component';
+import { StepperBackComponent }  from './components/stepper/stepper-back.component';
+import { StepperBackNextComponent }  from './components/stepper/stepper-back-next.component';
 
 import {Component, ViewEncapsulation} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -40,7 +44,10 @@ import {MatIconRegistry} from '@angular/material';
     LiquorToggleComponent,
     SearchComponent,
     CarouselEventsComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    StepperNextComponent,
+    StepperBackComponent,
+    StepperBackNextComponent
   ],
   imports: [
     BrowserModule,

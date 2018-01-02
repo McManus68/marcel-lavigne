@@ -1,5 +1,28 @@
 @import '../../../../assets/css/_variables';
 
+.create-event .image-container {
+    width: 500px;
+    height: 400px;
+    min-width: 250px;
+    min-height: 200px;
+    background: $background-color;
+    border: 1px dashed $foreground-color;
+}
+
 .mat-fab {
   box-shadow: none;
+}
+
+.label-file {
+  cursor: pointer;
+  color: $foreground-color;
+  text-decoration: underline;
+}
+
+.label-file:hover {
+  color: $primary-color;
+}
+
+.input-file {
+    display: none;
 }

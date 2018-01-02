@@ -46,17 +46,10 @@
             <span matSuffix>Euros</span>
           </mat-form-field>
         </div>
-         <div class="col">
-           <mat-slide-toggle color="primary"> Valider les demandes de participations?</mat-slide-toggle>
-         </div>
 
        </div>
 
-        <div class="d-flex justify-content-end">
-          <button mat-fab matStepperNext color="primary">
-            <mat-icon>arrow_forward</mat-icon>
-          </button>
-        </div>
+        <ml-stepper-next></ml-stepper-next>
       </form>
     </mat-step>
 
@@ -64,44 +57,48 @@
       <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel>Localisation</ng-template>
         <mat-form-field class="w-100">
+          <mat-icon matPrefix>place</mat-icon>
           <input matInput placeholder="Address" formControlName="secondCtrl" required>
         </mat-form-field>
 
         <div class="row">
           <mat-form-field class="col">
+            <mat-icon matPrefix>location_city</mat-icon>
             <input matInput placeholder="Ville">
           </mat-form-field>
           <mat-form-field class="col">
+            <mat-icon matPrefix>terrain</mat-icon>
             <input matInput placeholder="Département">
           </mat-form-field>
           <mat-form-field class="col">
+            <mat-icon matPrefix>map</mat-icon>
             <input matInput #postalCode maxlength="5" placeholder="Code postal">
             <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
           </mat-form-field>
        </div>
-
-       <div class="row">
-         <div class="col text-left">
-           <button mat-fab matStepperPrevious color="primary">
-             <mat-icon>arrow_backward</mat-icon>
-           </button>
-         </div>
-         <div class="col text-right">
-           <button mat-fab matStepperNext color="primary">
-             <mat-icon>arrow_forward</mat-icon>
-           </button>
-         </div>
-       </div>
+       <ml-stepper-back-next></ml-stepper-back-next>
 
       </form>
+
     </mat-step>
 
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      You are now done.
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-      </div>
+      <form>
+        <ng-template matStepLabel>Photo</ng-template>
+        <h2 class="pb-2">Veuillez sélectionner une photo pour illustrer l'évènement</h2>
+        <div class="row">
+          <div class="col">
+            <img class="image-container" [src]="picture">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="file" class="label-file">Choisir une image</label>
+            <input id="file" class="input-file" type="file"  (change)="changePicture($event)" placeholder="Choisir une image">
+          </div>
+        </div>
+        <ml-stepper-back [callback]="create"></ml-stepper-back>
+      </form>
     </mat-step>
 
   </mat-horizontal-stepper>
