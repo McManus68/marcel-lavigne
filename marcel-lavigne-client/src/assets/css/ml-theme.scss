@@ -1,5 +1,5 @@
 $ml-theme-primary: mat-palette($mat-pink, 300, 200, 800);
-$ml-theme-accent:  mat-palette($mat-indigo, 500, 300, 800);
+$ml-theme-accent:  mat-palette($mat-light-blue, 300, 400, 500);
 $ml-theme-warn:    mat-palette($mat-red);
 
-$ml-theme: mat-light-theme($ml-theme-primary, $ml-theme-accent);
+$ml-theme: mat-dark-theme($ml-theme-primary, $ml-theme-accent);

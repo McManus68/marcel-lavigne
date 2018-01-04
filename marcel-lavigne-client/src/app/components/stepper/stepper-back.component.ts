@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
               </div>
               <div class="col text-right">
                 <button mat-fab color="accent" (click)="callback()">
-                  <mat-icon>build</mat-icon>
+                  <mat-icon>done</mat-icon>
                 </button>
               </div>
             </div>`,

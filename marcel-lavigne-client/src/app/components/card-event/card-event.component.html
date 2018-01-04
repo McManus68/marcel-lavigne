@@ -1,0 +1,43 @@
+<div class="event-card mx-2">
+  <div [id]="'carousel-event-' + event.id"  class="carousel slide" data-interval="false" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li *ngFor="let image of event.images; let j = index"  data-slide-to="0" [ngClass]="{'active': j === 0 }" ></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div *ngFor="let image of event.images; let i = index" class="carousel-item" [ngClass]="{'active': i === 0 }">
+        <img class="event-img" src="../../assets/images/events/{{event.id}}/{{image}}" alt="{{image}}">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="{{'#carousel-event-' + event.id }}" data-slide="prev">
+       <mat-icon color="primary">chevron_left</mat-icon>
+    </a>
+    <a class="carousel-control-next" href="{{'#carousel-event-' + event.id }}" data-slide="next">
+       <mat-icon color="primary">chevron_right</mat-icon>
+    </a>
+  </div>
+
+  <div class="infos d-flex p-2">
+    <img class="avatar" src="../../assets/images/tintin.png" alt="Avatar">
+    <div class="d-flex flex-column w-100">
+
+      <div class="d-flex">
+        <div class="d-flex align-items-center">
+          <mat-icon color="primary">date_range</mat-icon>
+          <span class="date"> {{ event.date }} </span>
+        </div>
+        <div class="d-flex people align-items-center ml-auto">
+          <mat-icon>group</mat-icon>
+          <span> {{ event.participants }} / {{ event.capacity }} </span>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <span class="small mr-1"> {{ event.place }} </span>
+        <mat-icon class="star">star</mat-icon><mat-icon class="star">star</mat-icon><mat-icon class="star">star</mat-icon><mat-icon class="star">star_border</mat-icon>
+      </div>
+
+      <span>{{ event.name }}</span>
+    </div>
+  </div>
+</div>

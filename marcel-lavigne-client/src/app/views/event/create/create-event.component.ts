@@ -20,6 +20,7 @@ export class CreateEventComponent {
   event = {};
 
   constructor(private _formBuilder: FormBuilder, public snackBar: MatSnackBar, public router: Router) {
+    this.picture =  '../../assets/images/events/no_file.png';
   }
 
     ngOnInit() {
@@ -35,11 +36,12 @@ export class CreateEventComponent {
     }
 
     changePicture(event) {
-      this.picture = "../../assets/images/events/event-5.jpg";
+      this.picture = "../../assets/images/events/event_5.jpg";
     }
 
     create = () => {
-      this.snackBar.open('Evènement crée avec succés');
+      this.snackBar.open('Evènement crée avec succés', 'Succés', {
+        duration: 3000 });
       this.router.navigateByUrl('home');
     }
 }

@@ -13,7 +13,8 @@ registerLocaleData(localeFr, 'fr');
 import { AuthGuard } from './guards/auth.guard';
 import { AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
-
+import { EventService } from './services/event.service';
+import { MockedService }  from './services/mocked.service';
 /********************** MARCEL LAVIGNE VIEWS **********************/
 import { AppComponent }  from './app.component';
 import { LoginComponent } from './views/login/login.component';
@@ -25,10 +26,11 @@ import { CreateEventComponent }  from './views/event/create/create-event.compone
 /********************** CUSTOM COMPONENTS **********************/
 import { SearchComponent }  from './components/search/search.component';
 import { LiquorToggleComponent }  from './components/liquor-toggle/liquor-toggle.component';
-import { CarouselEventsComponent }  from './components/carousel-events/carousel-events.component';
+import { GridEventsComponent }  from './components/grid-events/grid-events.component';
 import { StepperNextComponent,  }  from './components/stepper/stepper-next.component';
 import { StepperBackComponent }  from './components/stepper/stepper-back.component';
 import { StepperBackNextComponent }  from './components/stepper/stepper-back-next.component';
+import { CardEventComponent }  from './components/card-event/card-event.component';
 
 import {Component, ViewEncapsulation} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -43,16 +45,17 @@ import {MatIconRegistry} from '@angular/material';
     FooterComponent,
     LiquorToggleComponent,
     SearchComponent,
-    CarouselEventsComponent,
+    GridEventsComponent,
     CreateEventComponent,
     StepperNextComponent,
     StepperBackComponent,
-    StepperBackNextComponent
+    StepperBackNextComponent,
+    CardEventComponent
   ],
   imports: [
+    MaterialModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
     HttpModule,
     routing
   ],
@@ -60,6 +63,8 @@ import {MatIconRegistry} from '@angular/material';
     AuthGuard,
     AuthenticationService,
     UserService,
+    EventService,
+    MockedService,
     {provide: LOCALE_ID, useValue: 'fr' }
   ],
   bootstrap: [AppComponent]

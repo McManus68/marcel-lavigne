@@ -32,14 +32,14 @@ body {
 }
 
 h1 {
-  font-size: 1.6em;
+  font-weight: bold;
+  font-size: 1.2em;
   color: $primary-color;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 1.2em;
-   color: $primary-color;
+  font-size: 1.1em;
+  color: $secondary-color;
 }
 
 .avatar {
@@ -47,4 +47,9 @@ h2 {
   width: 40px;
   height: 40px;
   margin: 0 5px;
+}
+
+.mat-snack-bar-container {
+  background: $secondary-color !important;
+  color: $primary-color !important;
 }

@@ -1,6 +1,6 @@
-<mat-card class="search p-2 m-3">
-  <div class="d-flex align-items-center">
-    <mat-form-field class="col">
+<div class="search p-3 mt-5">
+  <div class="d-flex align-items-center ">
+    <mat-form-field float="never" class="col">
       <mat-icon matPrefix color="primary">search</mat-icon>
       <input matInput [(ngModel)]="value" placeholder="Trouver un évènement">
       <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Rechercher" color="primary" (click)="value=''">
@@ -11,7 +11,7 @@
       <button mat-raised-button color="primary">Rechercher</button>
       <mat-icon (click)="rotate()" [@rotatedState]='state' class="show-advanced" color="primary" data-toggle="collapse" href="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch"> expand_more </mat-icon>
     </div>
- </div>
+  </div>
 
   <div id="advancedSearch" class="collapse">
     <div class="p-2 row">
@@ -32,4 +32,4 @@
       </div>
     </div>
   </div>
-</mat-card>
+</div>
