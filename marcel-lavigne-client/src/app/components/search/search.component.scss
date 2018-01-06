@@ -4,8 +4,8 @@
   border-radius: 5px;
 }
 
-.search #advancedSearch {
-  margin-top: 15px;
+.search h2 {
+    color: $foreground-color;
 }
 
 .search .show-advanced {
@@ -15,4 +15,15 @@
 .search .mat-slider-horizontal {
   width: 100%;
   min-width: 200px;
+}
+
+.search .header, .grid-events .footer {
+  grid-column: 1 / -1;
+  clear: both;
+}
+
+.search .header .mat-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 5em;
 }

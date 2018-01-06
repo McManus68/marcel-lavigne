@@ -9,3 +9,7 @@
 .mat-toolbar {
   font: inherit !important;
 }
+
+.ml-theme .mat-stepper-horizontal, .ml-theme .mat-stepper-vertical {
+  background: $background-color !important;
+}

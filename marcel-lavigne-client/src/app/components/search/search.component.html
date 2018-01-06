@@ -1,19 +1,24 @@
-<div class="search p-3 mt-5">
+<div class="search mt-2">
+
+  <header class="header p-2">
+    <div class="d-flex align-items-center">
+      <mat-icon color="primary">local_bar</mat-icon>
+      <h1 class="d-inline pl-2"> Rechercher des évènements autour de chez vous!  </h1>
+    </div>
+  </header>
+
   <div class="d-flex align-items-center ">
-    <mat-form-field float="never" class="col">
-      <mat-icon matPrefix color="primary">search</mat-icon>
-      <input matInput [(ngModel)]="value" placeholder="Trouver un évènement">
-      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Rechercher" color="primary" (click)="value=''">
-       <mat-icon>close</mat-icon>
-     </button>
-    </mat-form-field>
+    <div class="input-group col">
+      <input type="text" class="form-control" placeholder="Ex: Chardonnay, Champagne, Montpellier">
+    </div>
+
     <div class="d-inline-flex align-items-center">
       <button mat-raised-button color="primary">Rechercher</button>
       <mat-icon (click)="rotate()" [@rotatedState]='state' class="show-advanced" color="primary" data-toggle="collapse" href="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch"> expand_more </mat-icon>
     </div>
   </div>
 
-  <div id="advancedSearch" class="collapse">
+  <div id="advancedSearch" class="collapse pt-3">
     <div class="p-2 row">
       <div class="col">
         <h2> Type de dégustation </h2>

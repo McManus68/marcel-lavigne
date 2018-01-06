@@ -1,6 +1,11 @@
-<mat-card class="create-event p-2 m-3">
+<div class="create-event">
   <!--button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button-->
-  <h1> Créer un évènement</h1>
+  <header class="header p-2">
+    <div class="d-flex align-items-center">
+      <mat-icon color="primary">create</mat-icon>
+      <h1 class="d-inline pl-2"> Créer un évènement  </h1>
+    </div>
+  </header>
 
   <mat-horizontal-stepper [linear]="isLinear">
 
@@ -102,4 +107,4 @@
     </mat-step>
 
   </mat-horizontal-stepper>
-</mat-card>
+</div>

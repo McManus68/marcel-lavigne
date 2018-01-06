@@ -10,17 +10,16 @@
   background-color: $primary-color;
 }
 
-.event-card .infos .date {
+.event-card .date {
   color: $primary-color;
-  font-size: 1em;
 }
 
-.event-card .infos .star {
-  font-size: 0.8em;
+.event-card .place {
+  color: $foreground-secondary-color;
+}
+
+.event-card .place .mat-icon {
   width: 12px;
   height: 12px;
-}
-
-.event-card .infos .people {
-  color: $primary-color;
+  font-size: 1em;
 }

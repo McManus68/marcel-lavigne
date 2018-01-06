@@ -9,6 +9,12 @@
     border: 1px dashed $foreground-color;
 }
 
+.create-event .header .mat-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 5em;
+}
+
 .mat-fab {
   box-shadow: none;
 }

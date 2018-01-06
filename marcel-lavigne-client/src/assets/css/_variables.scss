@@ -14,6 +14,7 @@ $background: map-get($theme, background);
 // Définition des variables selon le thème
 $primary-color:  mat-color($primary);
 $secondary-color:  mat-color($accent);
-$foreground-color: mat-color($foreground, secondary-text);
+$foreground-color: mat-color($foreground, text);
+$foreground-secondary-color: mat-color($foreground, secondary-text);
 $background-color: mat-color($background, background);
 $background-color-darker: mat-color($background, app-bar);

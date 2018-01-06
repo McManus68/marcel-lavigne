@@ -29,15 +29,21 @@ body {
   font-size:13px;
   font-family: 'Nunito', sans-serif;
   background: $background-color;
+  color: $foreground-color;
 }
 
 h1 {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: $primary-color;
 }
 
 h2 {
+  font-size: 1.3em;
+  color: $primary-color;
+}
+
+h3 {
   font-size: 1.1em;
   color: $secondary-color;
 }

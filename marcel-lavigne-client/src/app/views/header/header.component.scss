@@ -6,20 +6,10 @@
   color: $foreground-color;
 }
 
-.header .title {
-  font-weight: 600;
-  font-size: 1.2em;
-  color: $primary-color;
-}
-
 .header .logo {
   width: 140px;
   height: 70px;
   padding: 10px;
-}
-
-.header .welcome {
-  margin-left: 30px;
 }
 
 .header .show-menu {
