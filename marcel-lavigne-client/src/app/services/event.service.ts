@@ -16,14 +16,9 @@ const httpOptions = {
 @Injectable()
 export class EventService {
 
-  private eventsUrl = 'rest/events';  // URL to web api
+  private eventsUrl = 'api/events';  // URL to web api
 
-  constructor(private http: HttpClient, private mockedService: MockedService
-  /*private messageService: MessageService*/) { }
-
-  getMockedEvents(): Event[] {
-      return this.mockedService.getEvents();       
-  }
+  constructor(private http: HttpClient, /*private messageService: MessageService*/) { }
 
   /** GET events from the server */
   getEvents (): Observable<Event[]> {

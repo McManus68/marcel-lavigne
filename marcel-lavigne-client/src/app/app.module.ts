@@ -2,9 +2,11 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+/********************** Mocked **********************/
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 /********************** I18N **********************/
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
@@ -53,10 +55,12 @@ import {MatIconRegistry} from '@angular/material';
     CardEventComponent
   ],
   imports: [
-    MaterialModule,
+    HttpModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
+    MaterialModule,
+    HttpClientInMemoryWebApiModule.forRoot(MockedService),
     routing
   ],
   providers: [

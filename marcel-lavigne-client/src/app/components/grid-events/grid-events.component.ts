@@ -14,10 +14,11 @@ export class GridEventsComponent implements OnInit {
   constructor(private eventService: EventService) {}
 
   ngOnInit() {
-    this.getEvents();    
+    this.getEvents();
   }
 
   getEvents(): void {
-    this.events = this.eventService.getMockedEvents();
+    this.eventService.getEvents()
+      .subscribe(events => this.events = events);
   }
 }

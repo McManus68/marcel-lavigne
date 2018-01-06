@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatOptionModule, MatSelectModule } from '@angular/material';
 import { MatNativeDateModule, MatIconModule, MatIconRegistry, MatExpansionModule, MatSliderModule, MatSlideToggleModule, MatCardModule } from '@angular/material';
 import { MatButtonToggleModule, MatToolbarModule, MatStepperModule, MatSnackBarModule } from '@angular/material';
-import {FloatLabelType, MAT_LABEL_GLOBAL_OPTIONS, LabelOptions} from '@angular/material/core';
+import { FloatLabelType, MAT_LABEL_GLOBAL_OPTIONS, LabelOptions } from '@angular/material/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @NgModule({
